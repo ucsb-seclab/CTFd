@@ -581,7 +581,7 @@ class ChallengeAttempt(Resource):
             )
 
         user = get_current_user()
-        team = get_current_team()
+        team = user.team
 
         # TODO: Convert this into a re-useable decorator
         if config.is_teams_mode() and team is None:
